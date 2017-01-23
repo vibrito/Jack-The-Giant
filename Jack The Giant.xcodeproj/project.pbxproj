@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BDCBBDBA1E32BABF008AD528 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCBBDB91E32BABF008AD528 /* Player.swift */; };
+		BDCBBDBE1E3307E3008AD528 /* Player.atlas in Resources */ = {isa = PBXBuildFile; fileRef = BDCBBDBD1E3307E3008AD528 /* Player.atlas */; };
+		BDCBBDC11E3410FD008AD528 /* BGClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCBBDC01E3410FD008AD528 /* BGClass.swift */; };
+		BDCBBDC41E3438BD008AD528 /* CloudsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCBBDC31E3438BD008AD528 /* CloudsController.swift */; };
 		BDD6619A1E304646006A48DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD661991E304646006A48DF /* AppDelegate.swift */; };
 		BDD6619E1E304646006A48DF /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = BDD6619D1E304646006A48DF /* Actions.sks */; };
 		BDD661A01E304646006A48DF /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD6619F1E304646006A48DF /* GameScene.swift */; };
@@ -60,6 +64,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BDCBBDB91E32BABF008AD528 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		BDCBBDBD1E3307E3008AD528 /* Player.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Player.atlas; sourceTree = "<group>"; };
+		BDCBBDC01E3410FD008AD528 /* BGClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BGClass.swift; sourceTree = "<group>"; };
+		BDCBBDC31E3438BD008AD528 /* CloudsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudsController.swift; sourceTree = "<group>"; };
 		BDD661961E304646006A48DF /* Jack The Giant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Jack The Giant.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDD661991E304646006A48DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BDD6619D1E304646006A48DF /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
@@ -125,6 +133,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BDCBBDB81E32BA90008AD528 /* Player Class */ = {
+			isa = PBXGroup;
+			children = (
+				BDCBBDB91E32BABF008AD528 /* Player.swift */,
+			);
+			name = "Player Class";
+			sourceTree = "<group>";
+		};
+		BDCBBDBF1E34106C008AD528 /* Background Class */ = {
+			isa = PBXGroup;
+			children = (
+				BDCBBDC01E3410FD008AD528 /* BGClass.swift */,
+			);
+			name = "Background Class";
+			sourceTree = "<group>";
+		};
+		BDCBBDC21E343889008AD528 /* Cloud Classes */ = {
+			isa = PBXGroup;
+			children = (
+				BDCBBDC31E3438BD008AD528 /* CloudsController.swift */,
+			);
+			name = "Cloud Classes";
+			sourceTree = "<group>";
+		};
 		BDD6618D1E304646006A48DF = {
 			isa = PBXGroup;
 			children = (
@@ -162,9 +194,10 @@
 		BDD661B11E304668006A48DF /* Asset */ = {
 			isa = PBXGroup;
 			children = (
+				BDCBBDBD1E3307E3008AD528 /* Player.atlas */,
+				BDD662131E30657E006A48DF /* Player */,
 				BDD661C01E30471B006A48DF /* 1 - Pause Panel And Buttons */,
 				BDD661C51E30471B006A48DF /* 2 - Collectables */,
-				BDD662131E30657E006A48DF /* 3 - Player */,
 				BDD661C81E30471B006A48DF /* 4 - Clouds */,
 				BDD661CD1E30471B006A48DF /* 5 - Fonts */,
 				BDD661CF1E30471B006A48DF /* 6 - Music */,
@@ -291,6 +324,9 @@
 		BDD6620F1E30641A006A48DF /* Game Classes */ = {
 			isa = PBXGroup;
 			children = (
+				BDCBBDC21E343889008AD528 /* Cloud Classes */,
+				BDCBBDBF1E34106C008AD528 /* Background Class */,
+				BDCBBDB81E32BA90008AD528 /* Player Class */,
 				BDD662101E306430006A48DF /* Scene Classes */,
 			);
 			name = "Game Classes";
@@ -304,7 +340,7 @@
 			name = "Scene Classes";
 			sourceTree = "<group>";
 		};
-		BDD662131E30657E006A48DF /* 3 - Player */ = {
+		BDD662131E30657E006A48DF /* Player */ = {
 			isa = PBXGroup;
 			children = (
 				BDD662141E30657E006A48DF /* Player 1.png */,
@@ -316,7 +352,7 @@
 				BDD6621A1E30657E006A48DF /* Player 7.png */,
 				BDD6621B1E30657E006A48DF /* Player 8.png */,
 			);
-			name = "3 - Player";
+			name = Player;
 			path = "Jack The Giant/3 - Player";
 			sourceTree = "<group>";
 		};
@@ -418,6 +454,7 @@
 				BDD662041E30471B006A48DF /* Hard Button.png in Resources */,
 				BDD662211E30657E006A48DF /* Player 6.png in Resources */,
 				BDD662071E30471B006A48DF /* Music Off Button.png in Resources */,
+				BDCBBDBE1E3307E3008AD528 /* Player.atlas in Resources */,
 				BDD661F81E30471B006A48DF /* Coin Sound.wav in Resources */,
 				BDD661AA1E304646006A48DF /* LaunchScreen.storyboard in Resources */,
 				BDD661F11E30471B006A48DF /* Cloud 1.png in Resources */,
@@ -437,9 +474,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDD662121E306458006A48DF /* GameplayScene.swift in Sources */,
+				BDCBBDC41E3438BD008AD528 /* CloudsController.swift in Sources */,
 				BDD661A01E304646006A48DF /* GameScene.swift in Sources */,
 				BDD661A21E304646006A48DF /* GameViewController.swift in Sources */,
+				BDCBBDBA1E32BABF008AD528 /* Player.swift in Sources */,
 				BDD6619A1E304646006A48DF /* AppDelegate.swift in Sources */,
+				BDCBBDC11E3410FD008AD528 /* BGClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -601,6 +641,7 @@
 				BDD661B01E304646006A48DF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
