@@ -83,9 +83,24 @@ class CloudsController
                 positionY = lastCloudPositionY
             }
             
+            var random = 0
+            
             for i in 0...clouds.count - 1
             {
-                clouds[i].position = CGPoint(x: 0, y: positionY)
+                var randomX = CGFloat()
+                
+                if random == 0
+                {
+                    randomX = randomBetweenNumbers(firstNum: center + 90, secondNum: maxX)
+                    random = 1
+                }
+                else if random == 1
+                {
+                    randomX = randomBetweenNumbers(firstNum: center - 90, secondNum: minX)
+                    random = 0
+                }
+                
+                clouds[i].position = CGPoint(x: randomX, y: positionY)
                 clouds[i].zPosition = 3
                 
                 scene.addChild(clouds[i])
