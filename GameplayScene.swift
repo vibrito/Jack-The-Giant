@@ -1,6 +1,6 @@
 import SpriteKit
 
-class GameplayScene: SKScene
+class GameplayScene: SKScene, SKPhysicsContactDelegate
 {
     var cloudsController = CloudsController()
     
@@ -36,6 +36,41 @@ class GameplayScene: SKScene
         managePlayer()
         manageBackgrounds()
         createNewClouds()
+        player?.setScore()
+    }
+    
+    func didBegin(_ contact: SKPhysicsContact)
+    {
+        var firstBody = SKPhysicsBody()
+        var secondBody = SKPhysicsBody()
+        
+        if contact.bodyA.node?.name == "Player"
+        {
+            firstBody = contact.bodyA
+            secondBody =  contact.bodyB
+        }
+        else
+        {
+            secondBody =  contact.bodyA
+            firstBody = contact.bodyB
+        }
+        
+        if firstBody.node?.name == "Player" && secondBody.node?.name == "Life"
+        {
+            // play the sound for the life
+            GameplayController.instance.incrementLife()
+            secondBody.node?.removeFromParent()
+        }
+        else if firstBody.node?.name == "Player" && secondBody.node?.name == "Coin"
+        {
+            // play the sound for the coin
+            GameplayController.instance.incrementCoin()
+            secondBody.node?.removeFromParent()
+        }
+        else if firstBody.node?.name == "Player" && secondBody.node?.name == "Dark Clound"
+        {
+            // kill the player
+        }
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?)
@@ -89,6 +124,8 @@ class GameplayScene: SKScene
     
     func initializeVariables()
     {
+        physicsWorld.contactDelegate = self
+        
         center = (self.scene?.size.width)! / (self.scene?.size.height)!
         
         player = self.childNode(withName: "Player") as! Player?

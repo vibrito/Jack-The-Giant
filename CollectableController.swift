@@ -7,9 +7,11 @@ class CollectableController
         var collectable = SKSpriteNode()
         
         // mexer nesa lógica para spawn de moedas e vidas
-        if Int(randomBetweenNumbers(firstNum: 0, secondNum: 7)) >= 2
+        let intRandon = Int(randomBetweenNumbers(firstNum: 0, secondNum: 7))
+        
+        if intRandon >= 3
         {
-            if GameplayController.instance.life! < 2
+            if GameplayController.instance.life! < 2 && intRandon == 3
             {
                 collectable = SKSpriteNode(imageNamed: "Life")
                 collectable.name = "Life"
