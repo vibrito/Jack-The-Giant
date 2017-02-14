@@ -177,6 +177,24 @@ class GameplayScene: SKScene, SKPhysicsContactDelegate
             cameraDistanceBeforeCreatingNewClouds = (mainCamera?.position.y)! - 400
             
             cloudsController.arrangeCloudsInScene(scene: self.scene!, distanceBetweenClouds: distanceBetweenClouds, center: center!, minX: minX, maxX: maxX, initialClouds: false)
+            
+            checkForChildsOutOfScreen()
+        }
+    }
+    
+    func checkForChildsOutOfScreen()
+    {
+        for child in children
+        {
+            if child.position.y > (mainCamera?.position.y)! + (self.scene?.size.height)!
+            {
+                let childName = child.name?.components(separatedBy: " ")
+                if childName![0] != "BG"
+                {
+                    print("The child that was removed is \(child.name!)")
+                    child.removeFromParent()
+                }
+            }
         }
     }
     

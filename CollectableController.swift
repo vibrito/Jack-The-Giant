@@ -6,12 +6,11 @@ class CollectableController
     {
         var collectable = SKSpriteNode()
         
-        // mexer nesa lógica para spawn de moedas e vidas
         let intRandon = Int(randomBetweenNumbers(firstNum: 0, secondNum: 7))
         
-        if intRandon >= 3
+        if intRandon >= 4
         {
-            if GameplayController.instance.life! < 2 && intRandon == 3
+            if GameplayController.instance.life! < 2
             {
                 collectable = SKSpriteNode(imageNamed: "Life")
                 collectable.name = "Life"
@@ -19,10 +18,14 @@ class CollectableController
             }
             else
             {
-                collectable = SKSpriteNode(imageNamed: "Coin")
-                collectable.name = "Coin"
-                collectable.physicsBody = SKPhysicsBody(circleOfRadius: collectable.size.height / 2)
+                collectable.name = "Empty"
             }
+        }
+        else
+        {
+            collectable = SKSpriteNode(imageNamed: "Coin")
+            collectable.name = "Coin"
+            collectable.physicsBody = SKPhysicsBody(circleOfRadius: collectable.size.height / 2)
         }
         
         collectable.physicsBody?.affectedByGravity = false

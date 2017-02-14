@@ -26,7 +26,7 @@ class GameplayController
             
             score = 0
             coin = 0
-            life = 1
+            life = 2
             
             scoreText?.text = "\(score!)"
             coinText?.text = "x\(coin!)"
