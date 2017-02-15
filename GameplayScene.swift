@@ -17,6 +17,9 @@ class GameplayScene: SKScene, SKPhysicsContactDelegate
     
     var center: CGFloat?
     
+    private let playerMinX = CGFloat(-215)
+    private let playerMaxX = CGFloat(215)
+
     private var cameraDistanceBeforeCreatingNewClouds = CGFloat()
     
     let distanceBetweenClouds = CGFloat(240)
@@ -155,6 +158,26 @@ class GameplayScene: SKScene, SKPhysicsContactDelegate
         if canMove
         {
             player?.movePlayer(moveLeft: moveLeft)
+        }
+        
+        if (player?.position.x)! > playerMaxX
+        {
+            player?.position.x = playerMaxX
+        }
+        
+        if (player?.position.x)! < playerMinX
+        {
+            player?.position.x = playerMinX
+        }
+        
+        if (player?.position.y)! - (player?.size.height)! * 3.7 > (mainCamera?.position.y)!
+        {
+            self.scene?.isPaused = true
+        }
+        
+        if (player?.position.y)! + (player?.size.height)! * 3.7 < (mainCamera?.position.y)!
+        {
+            self.scene?.isPaused = true
         }
     }
     
