@@ -16,6 +16,7 @@
 		BD7D2B501E3E752200B4AE83 /* GameplayController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7D2B4F1E3E752200B4AE83 /* GameplayController.swift */; };
 		BD7D2B521E3EC42300B4AE83 /* GameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7D2B511E3EC42300B4AE83 /* GameManager.swift */; };
 		BD7D2B541E3EEE3500B4AE83 /* CollectableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7D2B531E3EEE3500B4AE83 /* CollectableController.swift */; };
+		BDB14FD71E5A1DCE00B0C95F /* GameData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB14FD61E5A1DCE00B0C95F /* GameData.swift */; };
 		BDCBBDBA1E32BABF008AD528 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCBBDB91E32BABF008AD528 /* Player.swift */; };
 		BDCBBDBE1E3307E3008AD528 /* Player.atlas in Resources */ = {isa = PBXBuildFile; fileRef = BDCBBDBD1E3307E3008AD528 /* Player.atlas */; };
 		BDCBBDC11E3410FD008AD528 /* BGClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCBBDC01E3410FD008AD528 /* BGClass.swift */; };
@@ -82,6 +83,7 @@
 		BD7D2B4F1E3E752200B4AE83 /* GameplayController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameplayController.swift; sourceTree = "<group>"; };
 		BD7D2B511E3EC42300B4AE83 /* GameManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameManager.swift; sourceTree = "<group>"; };
 		BD7D2B531E3EEE3500B4AE83 /* CollectableController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectableController.swift; sourceTree = "<group>"; };
+		BDB14FD61E5A1DCE00B0C95F /* GameData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameData.swift; sourceTree = "<group>"; };
 		BDCBBDB91E32BABF008AD528 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		BDCBBDBD1E3307E3008AD528 /* Player.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Player.atlas; sourceTree = "<group>"; };
 		BDCBBDC01E3410FD008AD528 /* BGClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BGClass.swift; sourceTree = "<group>"; };
@@ -158,6 +160,14 @@
 				BD7D2B511E3EC42300B4AE83 /* GameManager.swift */,
 			);
 			name = "Game Controllers and Managers";
+			sourceTree = "<group>";
+		};
+		BDB14FD51E5A1DB700B0C95F /* Game Data Class */ = {
+			isa = PBXGroup;
+			children = (
+				BDB14FD61E5A1DCE00B0C95F /* GameData.swift */,
+			);
+			name = "Game Data Class";
 			sourceTree = "<group>";
 		};
 		BDCBBDB81E32BA90008AD528 /* Player Class */ = {
@@ -355,6 +365,7 @@
 		BDD6620F1E30641A006A48DF /* Game Classes */ = {
 			isa = PBXGroup;
 			children = (
+				BDB14FD51E5A1DB700B0C95F /* Game Data Class */,
 				BD7D2B4E1E3E74F000B4AE83 /* Game Controllers and Managers */,
 				BDCBBDC21E343889008AD528 /* Cloud And Collectable Controllers */,
 				BDCBBDBF1E34106C008AD528 /* Background Class */,
@@ -522,6 +533,7 @@
 				BD2C60A61E3AD4B1002F54F9 /* MainMenuScene.swift in Sources */,
 				BD7D2B541E3EEE3500B4AE83 /* CollectableController.swift in Sources */,
 				BDCBBDC11E3410FD008AD528 /* BGClass.swift in Sources */,
+				BDB14FD71E5A1DCE00B0C95F /* GameData.swift in Sources */,
 				BD7D2B501E3E752200B4AE83 /* GameplayController.swift in Sources */,
 				BD7D2B4D1E3D389500B4AE83 /* OptionScene.swift in Sources */,
 			);
