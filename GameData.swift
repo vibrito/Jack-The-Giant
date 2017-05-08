@@ -126,7 +126,7 @@ class GameData: NSObject, NSCoding
         self.hardDifficultyCoinScore = hardDifficultyCoinScore
     }
     
-    func getMHardDifficultyScore() -> Int32
+    func getHardDifficultyScore() -> Int32
     {
         return self.hardDifficultyScore
     }
